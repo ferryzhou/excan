@@ -1,6 +1,6 @@
 require './sequel_import'
 
-db_path = 'development.sqlite3'
+db_path = '../excan_rails/db/development.sqlite3'
 filepath = 'tianya.htm'
 method = 'tianya'
 dirpath = '../cancer_htm/tianya/*.htm'

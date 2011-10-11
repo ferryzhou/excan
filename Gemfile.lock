@@ -1,0 +1,14 @@
+GEM
+  remote: http://rubygems.org/
+  specs:
+    hpricot (0.8.4)
+    sequel (3.20.0)
+    sqlite3 (1.3.3-x86-mingw32)
+
+PLATFORMS
+  x86-mingw32
+
+DEPENDENCIES
+  hpricot
+  sequel
+  sqlite3 (= 1.3.3)
