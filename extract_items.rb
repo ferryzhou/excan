@@ -23,7 +23,7 @@ def extract_tianya_items(content)
       'title' => (link/'//text()').join(''),
       'link'  => link['href'],
       'author' => related.at('a').inner_html,
-      'date'  => text[(ind + 9) .. (ind + 24)],
+      'date'  => text[(ind + 3) .. (ind + 18)],
       'description' => e.at('p.summary').inner_html,
 	  'source' => 'tianya'
   })
