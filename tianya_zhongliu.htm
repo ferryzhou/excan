@@ -1,0 +1,855 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+<head>
+  
+    <title>天涯医院_天涯论坛_天涯社区</title> 
+    <meta name="keywords" content="天涯医院, 论坛, bbs, 天涯, 社区" /> 
+    <meta name="description" content="全民话题，天涯制造——天涯论坛，全球最具有影响力的中文论坛" /> 	
+	<meta name="author" content="天涯城市" /> 
+	<meta name="copyright" content="1999-2010 海南天涯在线网络科技有限公司." /> 
+	<meta http-equiv="Content-Type" content="text/html; charset=gbk" />
+	<link href="http://bbs.city.tianya.cn/new/tianyacity/css/ArticlesStyle.css" rel="stylesheet" type="text/css" />
+	<link href="http://static.tianyaui.com/w250/images/shangjia/shangjia_css.css" rel="stylesheet" type="text/css" />	
+	<link href="http://global.tianyaui.com/global/gnav/css/nav_bbs.css" rel="stylesheet" type="text/css" />
+	<link href="http://global.tianyaui.com/global/leftnav/css/baseForum_v4.css" rel="stylesheet" type="text/css" />
+	<link rel="shortcut icon" href="http://static.tianyaui.com/favicon.ico" type="image/vnd.microsoft.icon" />
+	<script type="text/javascript" charset="utf-8" src="http://global.tianyaui.com/global/gnav/js/global-all.js">
+	</script>
+	<script type="text/javascript"  charset="utf-8" src="http://global.tianyaui.com/global/leftnav/js/tyitems.js">
+	</script>
+</head>
+<body>
+<script type="text/javascript" charset="utf-8" src="http://global.tianyaui.com/global/gnav/js/nav_footer.js"> </script>
+<div id="forumWrapper">
+  <div id="leftarea">
+    <div id="leftNav" class="leftnav" >
+    <script charset="utf-8" type="text/javascript" src="http://global.tianyaui.com/global/leftnav/js/leftnav_v2-min.js"></script>
+    
+    </div>
+  </div>	
+  <!-- 页面主体区-开始 -->
+  <div id="mainDiv"> 
+    <script type="text/javascript" charset="utf-8" src="http://global.tianyaui.com/global/gnav/js/nav_top_bbs.js">  </script>
+    
+    <div id="newmaincontent" class="cf">
+        <div id="newmainmidleft">
+            		
+            <div id="adsp_list_top_banner" class="midad"></div>
+            <div class="forumname cf">
+              <h2 class="left">天涯医院</h2><div id="my_add2myblock" blockid="100"></div>
+              <div class="plateinfo"><span class="management">
+                </span>主贴：360626&nbsp;&nbsp;总贴：1761524</div>
+            </div>
+            <div id="moderator" class="cf">
+            [斑竹:<a href='http://my.tianya.cn/name/寂寞河床'  Target=_blank>寂寞河床</a> <a href='http://my.tianya.cn/name/生命指征'  Target=_blank>生命指征</a> <a href='http://my.tianya.cn/name/一月鹰飞'  Target=_blank>一月鹰飞</a> ]
+            [实习:<a href='http://my.tianya.cn/name/涯之医者' Target=_blank>涯之医者</a> ]
+            [特邀:<a href='http://my.tianya.cn/name/六月荷如雪' Target=_blank>六月荷如雪</a> ]
+            </div>
+            <div id="recommend">
+			  <div class="recommend-gm">
+				<div class="recommend-con">
+					<span class="rg-a"></span><span class="rg-b" id="adsp_list_moderator"></span>
+				</div>
+			  </div>
+              <div class="bd">
+                <div id="adsp_list_recomm">
+                    <iframe src=http://zt.tianya.cn/bbstop/qz/100/index.shtml width=630 height=195 FRAMEBORDER=0 SCROLLING=no></iframe></div>
+                <div id="adsp_list_top_text_root"></div>
+                <span class=clear></span>
+              </div>
+            </div>
+          
+            <div id="postlistwrapper">
+                <div class="subtab">
+                  <div class="subtab-t">
+                    <div class="subtab-r-btn">
+                    <a href="http://www.tianya.cn/new/techforum/compose.asp?iditem=100">发表帖子</a>
+                    
+                    </div>
+                    
+                    <script  language="javascript">
+                    var idWriter=__global.getUserId();
+                    if(isNaN(parseInt(idWriter))){
+                        idWriter=0;
+                    }
+                    var idwriter=idWriter;
+                    jQuery("#CertificationWarn").click(function(){
+                        if(idwriter != 0 && __global.isOnline()==true)
+                        {
+                            jQuery.getJSON("http://www.tianya.cn/mrdd/checkVip_v3_call.asp?checkVip_idwriter="+idwriter+"&checkVip_dataFmt=JSON&jsoncallback=?", function(json)
+                            {
+                                var v_success=json.success;
+                                var vType=json.data.list[0].vtype;
+                                var mType=json.data.list[0].mtype;
+                                if (v_success != 1 || !(vType == "1" || mType=="1"))
+                                {
+                                    tb_show2("发帖提示",{width:412,height:85,html:'<div><p>本版为<a href="http://passport.tianya.cn/portect?action=smsintro&from=successtqbk" target="_blank">天涯认证会员</a>专版，您的账号需要认证后才能发帖及回复。</p><a href="http://passport.tianya.cn/portect?action=smsintro&from=successtqbk" target="_blank"><img border=0 src="http://static.tianyaui.com/js/2010/smrz.jpg"></a></div>'});
+                                }
+                                else{
+                                    window.location.href="http://www.tianya.cn/new/techforum/compose.asp?iditem=100";
+                                }
+                            });
+                        }else{
+                            tb_show2("发帖提示",{width:412,height:85,html:'<div><p>本版为<a href="http://passport.tianya.cn/portect?action=smsintro&from=successtqbk" target="_blank">天涯认证会员</a>专版，您的账号需要认证后才能发帖及回复。</p><a href="http://passport.tianya.cn/portect?action=smsintro&from=successtqbk" target="_blank"><img border=0 src="http://static.tianyaui.com/js/2010/smrz.jpg"></a></div>'});
+                        }
+                    });
+                    </script>
+                    
+                        <div class="subtab-l">
+                            <ul>                            
+                            <li id="HtmlLiID1" class="unsel"><a href="http://www.tianya.cn/new/techforum/articleslist.asp?iditem=100&strpart=最新更新&part=0">最新更新</a></li>
+                            <li id="HtmlLiID2" class="unsel"><a href="http://www.tianya.cn/new/techforum/articleslist.asp?iditem=100&strpart=最新发表&part=1">最新发表</a></li>
+                            <li id="HtmlLiID3" class="unsel"><a href="http://www.tianya.cn/new/techforum/articleslist.asp?iditem=100&strpart=精品文章&part=3">精品文章</a></li>
+                            <li id="HtmlLiID4" class="unsel"><a href="http://www.tianya.cn/new/techforum/articleslist.asp?iditem=100&strpart=版务处理&part=0&subitem=版务处理">版务处理</a></li>                            
+                            </ul>
+                        </div>
+                    </div>
+                    <script LANGUAGE="JavaScript">	
+                     var strPart = '最新更新';                
+                     var navs = {"最新更新":"#HtmlLiID1","最新发表":"#HtmlLiID2","精品文章":"#HtmlLiID3","版务处理":"#HtmlLiID4"};
+                     jQuery(document).ready(function(evt)
+                     {
+                         jQuery(navs["最新更新"]).attr("class", "sel");
+ 
+                     });
+                    </script>
+                    <div class="subtab-bar">
+                        <a href="http://www.tianya.cn/new/techforum/articleslist.asp?iditem=100&part=0">默认页</a>\<a href="http://www.tianya.cn/new/techforum/articleslist.asp?iditem=100&part=0&subitem=内科">内科</a>\<a href="http://www.tianya.cn/new/techforum/articleslist.asp?iditem=100&part=0&subitem=外科">外科</a>\<a href="http://www.tianya.cn/new/techforum/articleslist.asp?iditem=100&part=0&subitem=妇产科">妇产科</a>\<a href="http://www.tianya.cn/new/techforum/articleslist.asp?iditem=100&part=0&subitem=儿科">儿科</a>\<a href="http://www.tianya.cn/new/techforum/articleslist.asp?iditem=100&part=0&subitem=传染科">传染科</a>\<b>肿瘤科</b>
+                                        \<a href="http://www.tianya.cn/new/techforum/articleslist.asp?iditem=100&part=0&subitem=皮肤科">皮肤科</a>\<a href="http://www.tianya.cn/new/techforum/articleslist.asp?iditem=100&part=0&subitem=眼科">眼科</a>\<a href="http://www.tianya.cn/new/techforum/articleslist.asp?iditem=100&part=0&subitem=耳鼻喉科">耳鼻喉科</a>\<a href="http://www.tianya.cn/new/techforum/articleslist.asp?iditem=100&part=0&subitem=口腔科">口腔科</a>\<a href="http://www.tianya.cn/new/techforum/articleslist.asp?iditem=100&part=0&subitem=中医科">中医科</a>\<a href="http://www.tianya.cn/new/techforum/articleslist.asp?iditem=100&part=0&subitem=心理科">心理科</a>\<a href="http://www.tianya.cn/new/techforum/articleslist.asp?iditem=100&part=0&subitem=美容科">美容科</a>\<a href="http://www.tianya.cn/new/techforum/articleslist.asp?iditem=100&part=0&subitem=保健科">保健科</a>\<a href="http://www.tianya.cn/new/techforum/articleslist.asp?iditem=100&part=0&subitem=泌尿科">泌尿科</a>\<a href="http://www.tianya.cn/new/techforum/articleslist.asp?iditem=100&part=0&subitem=检验科">检验科</a>\<a href="http://www.tianya.cn/new/techforum/articleslist.asp?iditem=100&part=0&subitem=医普园地">医普园地</a>\<a href="http://www.tianya.cn/new/techforum/articleslist.asp?iditem=100&part=0&subitem=休闲时刻">休闲时刻</a>\<a href="http://www.tianya.cn/new/techforum/articleslist.asp?iditem=100&part=0&subitem=医者心声">医者心声</a>\<a href="http://www.tianya.cn/new/techforum/articleslist.asp?iditem=100&part=0&subitem=患者心声">患者心声</a>\<a href="http://www.tianya.cn/new/techforum/articleslist.asp?iditem=100&part=0&subitem=性与健康">性与健康</a>\<a href="http://www.tianya.cn/new/techforum/articleslist.asp?iditem=100&part=0&subitem=医院公告">医院公告</a>
+                    </div>
+                </div>
+                <table border="0" cellpadding="0" cellspacing="0" class="listtable">
+                    <thead>
+                        <tr class="wbg">
+                          <th class="row01" width="355">标题</th>
+		  
+                          <th width="100" class="row02">作者</th>
+		  
+                          <th class="w_c" width="35">访问</th>
+	  
+                          <th class="w_c" width="35">回复</th>
+	
+                          <th class="w_c" width="75">更新时间</th>
+                        </tr>
+                    </thead>
+                 </table> 
+                 <table class="listtable wbg" height="20" border="0" cellspacing="0" name="adsp_list_post_info_b">
+                  <tr><td class="posttitle faceblue">
+                      <a href="http://www.tianya.cn/techforum/content/100/1/849095.shtml" target="_blank">[肿瘤科]父亲百日之后，说说治疗过程</a></td>
+                          <td class="author"><a href="http://my.tianya.cn/2623349" target="_blank">唐老鸭SZ</a>
+                          </td>
+                          <td class="tviewre w_c">484</td>
+                          <td class="treplay w_c">7</td>
+                          <td class="ttime w_c">10-16 6:02</td>
+                      </tr>
+                    </table>
+                 <table class="listtable bg" height="20" border="0" cellspacing="0" name="adsp_list_post_info_b">
+                  <tr><td class="posttitle faceblue">
+                      <a href="http://www.tianya.cn/techforum/content/100/1/883783.shtml" target="_blank">[肿瘤科]至爱天堂～亲爱的爸爸！</a></td>
+                          <td class="author"><a href="http://my.tianya.cn/57701126" target="_blank">瞬间的闪电</a>
+                          </td>
+                          <td class="tviewre w_c">51</td>
+                          <td class="treplay w_c">0</td>
+                          <td class="ttime w_c">10-16 5:53</td>
+                      </tr>
+                    </table>
+                 <table class="listtable wbg" height="20" border="0" cellspacing="0" name="adsp_list_post_info_b">
+                  <tr><td class="posttitle faceblue">
+                      <a href="http://www.tianya.cn/techforum/content/100/1/883017.shtml" target="_blank">[肿瘤科]母亲二七时（结肠癌）父亲被查出直肠癌</a></td>
+                          <td class="author"><a href="http://my.tianya.cn/58959632" target="_blank">渴望健康1</a>
+                          </td>
+                          <td class="tviewre w_c">249</td>
+                          <td class="treplay w_c">5</td>
+                          <td class="ttime w_c">10-16 4:09</td>
+                      </tr>
+                    </table>
+                 <table class="listtable bg" height="20" border="0" cellspacing="0" name="adsp_list_post_info_b">
+                  <tr><td class="posttitle faceblue">
+                      <a href="http://www.tianya.cn/techforum/content/100/1/615732.shtml" target="_blank">[肿瘤科]我妈得了直肠癌，请帮我看看</a></td>
+                          <td class="author"><a href="http://my.tianya.cn/1908838" target="_blank">大风铃</a>
+                          </td>
+                          <td class="tviewre w_c">265318</td>
+                          <td class="treplay w_c">2096</td>
+                          <td class="ttime w_c">10-16 3:09</td>
+                      </tr>
+                    </table>
+                 <table class="listtable wbg" height="20" border="0" cellspacing="0" name="adsp_list_post_info_b">
+                  <tr><td class="posttitle faceblue">
+                      <a href="http://www.tianya.cn/techforum/content/100/1/662446.shtml" target="_blank">[肿瘤科]与鼻咽癌斗争到底——妈妈的NPC治疗记录</a></td>
+                          <td class="author"><a href="http://my.tianya.cn/6677947" target="_blank">flyingfishz</a>
+                          </td>
+                          <td class="tviewre w_c">263435</td>
+                          <td class="treplay w_c">3105</td>
+                          <td class="ttime w_c">10-16 1:56</td>
+                      </tr>
+                    </table>
+                 <table class="listtable bg" height="20" border="0" cellspacing="0" name="adsp_list_post_info_b">
+                  <tr><td class="posttitle faceblue">
+                      <a href="http://www.tianya.cn/techforum/content/100/1/799232.shtml" target="_blank">[肿瘤科]记录妈妈患早期乳Ca后的日子</a></td>
+                          <td class="author"><a href="http://my.tianya.cn/53770304" target="_blank">祈祷的小猫2011</a>
+                          </td>
+                          <td class="tviewre w_c">2731</td>
+                          <td class="treplay w_c">66</td>
+                          <td class="ttime w_c">10-16 1:17</td>
+                      </tr>
+                    </table>
+                 <table class="listtable wbg" height="20" border="0" cellspacing="0" name="adsp_list_post_info_b">
+                  <tr><td class="posttitle faceblue">
+                      <a href="http://www.tianya.cn/techforum/content/100/1/787761.shtml" target="_blank">[肿瘤科]结肠癌晚期伴肝肺转移___面对生命永不言弃!我最最最爱的妈妈一定要加油！(妈妈安息）</a></td>
+                          <td class="author"><a href="http://my.tianya.cn/51595185" target="_blank">期待奇迹010203</a>
+                          </td>
+                          <td class="tviewre w_c">9330</td>
+                          <td class="treplay w_c">169</td>
+                          <td class="ttime w_c">10-16 1:17</td>
+                      </tr>
+                    </table>
+                 <table class="listtable bg" height="20" border="0" cellspacing="0" name="adsp_list_post_info_b">
+                  <tr><td class="posttitle faceblue">
+                      <a href="http://www.tianya.cn/techforum/content/100/1/782088.shtml" target="_blank">[肿瘤科]母亲查出胰头癌，手术还是中医，很惶恐。。。</a></td>
+                          <td class="author"><a href="http://my.tianya.cn/50151852" target="_blank">惶恐的叶子</a>
+                          </td>
+                          <td class="tviewre w_c">2723</td>
+                          <td class="treplay w_c">73</td>
+                          <td class="ttime w_c">10-16 0:06</td>
+                      </tr>
+                    </table>
+                 <table class="listtable wbg" height="20" border="0" cellspacing="0" name="adsp_list_post_info_b">
+                  <tr><td class="posttitle faceblue">
+                      <a href="http://www.tianya.cn/techforum/content/100/1/858854.shtml" target="_blank">[肿瘤科]妈妈，不要丢下我，求你了</a></td>
+                          <td class="author"><a href="http://my.tianya.cn/53824458" target="_blank">kktt2</a>
+                          </td>
+                          <td class="tviewre w_c">966</td>
+                          <td class="treplay w_c">27</td>
+                          <td class="ttime w_c">10-15 23:34</td>
+                      </tr>
+                    </table>
+                 <table class="listtable bg" height="20" border="0" cellspacing="0" name="adsp_list_post_info_b">
+                  <tr><td class="posttitle faceblue">
+                      <a href="http://www.tianya.cn/techforum/content/100/1/738421.shtml" target="_blank">[肿瘤科]早期胃癌交流经验</a></td>
+                          <td class="author"><a href="http://my.tianya.cn/28425169" target="_blank">2009战胜胃癌</a>
+                          </td>
+                          <td class="tviewre w_c">32429</td>
+                          <td class="treplay w_c">606</td>
+                          <td class="ttime w_c">10-15 22:22</td>
+                      </tr>
+                    </table>
+                 <table class="listtable wbg" height="20" border="0" cellspacing="0" name="adsp_list_post_info_b">
+                  <tr><td class="posttitle faceblue">
+                      <a href="http://www.tianya.cn/techforum/content/100/1/848062.shtml" target="_blank">[肿瘤科]爸爸胃癌，淋巴结转移，侵及浆膜层，我会努力的，大家都加油，战胜癌症</a></td>
+                          <td class="author"><a href="http://my.tianya.cn/10322505" target="_blank">lonelypollux</a>
+                          </td>
+                          <td class="tviewre w_c">1149</td>
+                          <td class="treplay w_c">26</td>
+                          <td class="ttime w_c">10-15 21:44</td>
+                      </tr>
+                    </table>
+                 <table class="listtable bg" height="20" border="0" cellspacing="0" name="adsp_list_post_info_b">
+                  <tr><td class="posttitle faceblue">
+                      <a href="http://www.tianya.cn/techforum/content/100/1/883761.shtml" target="_blank">[肿瘤科]寻找能做气管（大气管）移植的医院，谢谢了</a></td>
+                          <td class="author"><a href="http://my.tianya.cn/59010486" target="_blank">x3gx3g</a>
+                          </td>
+                          <td class="tviewre w_c">94</td>
+                          <td class="treplay w_c">0</td>
+                          <td class="ttime w_c">10-15 17:19</td>
+                      </tr>
+                    </table>
+                 <table class="listtable wbg" height="20" border="0" cellspacing="0" name="adsp_list_post_info_b">
+                  <tr><td class="posttitle faceblue">
+                      <a href="http://www.tianya.cn/techforum/content/100/1/732731.shtml" target="_blank">[肿瘤科]甲状腺癌讨论贴，让我们坚强科学地面对它</a></td>
+                          <td class="author"><a href="http://my.tianya.cn/1834868" target="_blank">纯颜</a>
+                          </td>
+                          <td class="tviewre w_c">78205</td>
+                          <td class="treplay w_c">922</td>
+                          <td class="ttime w_c">10-15 16:46</td>
+                      </tr>
+                    </table>
+                 <table class="listtable bg" height="20" border="0" cellspacing="0" name="adsp_list_post_info_b">
+                  <tr><td class="posttitle faceblue">
+                      <a href="http://www.tianya.cn/techforum/content/100/1/610774.shtml" target="_blank">[肿瘤科]有关癌症，觉得看着挺有道理，大家分享一下(转载)</a></td>
+                          <td class="author"><a href="http://my.tianya.cn/645376" target="_blank">超级兔子</a>
+                          </td>
+                          <td class="tviewre w_c">683</td>
+                          <td class="treplay w_c">3</td>
+                          <td class="ttime w_c">10-15 16:45</td>
+                      </tr>
+                    </table>
+                 <table class="listtable wbg" height="20" border="0" cellspacing="0" name="adsp_list_post_info_b">
+                  <tr><td class="posttitle faceblue">
+                      <a href="http://www.tianya.cn/techforum/content/100/1/710832.shtml" target="_blank">[肿瘤科]脑胶质瘤门诊</a></td>
+                          <td class="author"><a href="http://my.tianya.cn/10034506" target="_blank">魏博士</a>
+                          </td>
+                          <td class="tviewre w_c">312353</td>
+                          <td class="treplay w_c">6299</td>
+                          <td class="ttime w_c">10-15 16:44</td>
+                      </tr>
+                    </table>
+                 <table class="listtable bg" height="20" border="0" cellspacing="0" name="adsp_list_post_info_b">
+                  <tr><td class="posttitle faceblue">
+                      <a href="http://www.tianya.cn/techforum/content/100/1/870298.shtml" target="_blank">[肿瘤科]父亲壶腹癌术，化疗一个疗程</a></td>
+                          <td class="author"><a href="http://my.tianya.cn/58499627" target="_blank">lvh111</a>
+                          </td>
+                          <td class="tviewre w_c">206</td>
+                          <td class="treplay w_c">4</td>
+                          <td class="ttime w_c">10-15 16:29</td>
+                      </tr>
+                    </table>
+                 <table class="listtable wbg" height="20" border="0" cellspacing="0" name="adsp_list_post_info_b">
+                  <tr><td class="posttitle faceblue">
+                      <a href="http://www.tianya.cn/techforum/content/100/1/679333.shtml" target="_blank">[肿瘤科]加油！胃癌是可以战胜的！--祝福我亲爱的妈妈</a></td>
+                          <td class="author"><a href="http://my.tianya.cn/14766033" target="_blank">悬在空中的吻2008</a>
+                          </td>
+                          <td class="tviewre w_c">402999</td>
+                          <td class="treplay w_c">3447</td>
+                          <td class="ttime w_c">10-15 16:18</td>
+                      </tr>
+                    </table>
+                 <table class="listtable bg" height="20" border="0" cellspacing="0" name="adsp_list_post_info_b">
+                  <tr><td class="posttitle faceblue">
+                      <a href="http://www.tianya.cn/techforum/content/100/1/883076.shtml" target="_blank">[肿瘤科]晚期结肠癌肝转移能手术吗</a></td>
+                          <td class="author"><a href="http://my.tianya.cn/58983388" target="_blank">joannec</a>
+                          </td>
+                          <td class="tviewre w_c">158</td>
+                          <td class="treplay w_c">1</td>
+                          <td class="ttime w_c">10-15 16:13</td>
+                      </tr>
+                    </table>
+                 <table class="listtable wbg" height="20" border="0" cellspacing="0" name="adsp_list_post_info_b">
+                  <tr><td class="posttitle faceblue">
+                      <a href="http://www.tianya.cn/techforum/content/100/1/831317.shtml" target="_blank">[肿瘤科]我的爱人啊，让我们一起面对</a></td>
+                          <td class="author"><a href="http://my.tianya.cn/16891834" target="_blank">梅影步舒</a>
+                          </td>
+                          <td class="tviewre w_c">24230</td>
+                          <td class="treplay w_c">344</td>
+                          <td class="ttime w_c">10-15 16:08</td>
+                      </tr>
+                    </table>
+                 <table class="listtable bg" height="20" border="0" cellspacing="0" name="adsp_list_post_info_b">
+                  <tr><td class="posttitle faceblue">
+                      <a href="http://www.tianya.cn/techforum/content/100/1/876327.shtml" target="_blank">[肿瘤科]相信爸爸可以和胰腺癌共生~</a></td>
+                          <td class="author"><a href="http://my.tianya.cn/46877229" target="_blank">ooplufei</a>
+                          </td>
+                          <td class="tviewre w_c">635</td>
+                          <td class="treplay w_c">18</td>
+                          <td class="ttime w_c">10-15 16:05</td>
+                      </tr>
+                    </table>
+                 <table class="listtable wbg" height="20" border="0" cellspacing="0" name="adsp_list_post_info_b">
+                  <tr><td class="posttitle faceblue">
+                      <a href="http://www.tianya.cn/techforum/content/100/1/872567.shtml" target="_blank">[肿瘤科]9岁女儿患尤文氏肉瘤，肺部发现多处结节，寻求帮助</a></td>
+                          <td class="author"><a href="http://my.tianya.cn/58582986" target="_blank">泉水依然叮咚</a>
+                          </td>
+                          <td class="tviewre w_c">532</td>
+                          <td class="treplay w_c">14</td>
+                          <td class="ttime w_c">10-15 15:47</td>
+                      </tr>
+                    </table>
+                 <table class="listtable bg" height="20" border="0" cellspacing="0" name="adsp_list_post_info_b">
+                  <tr><td class="posttitle faceblue">
+                      <a href="http://www.tianya.cn/techforum/content/100/1/794218.shtml" target="_blank">[肿瘤科]急需！治疗鼻咽癌肺转移后的骨转移，肝转移方案</a></td>
+                          <td class="author"><a href="http://my.tianya.cn/27091626" target="_blank">scyoyoyo</a>
+                          </td>
+                          <td class="tviewre w_c">1250</td>
+                          <td class="treplay w_c">32</td>
+                          <td class="ttime w_c">10-15 15:18</td>
+                      </tr>
+                    </table>
+                 <table class="listtable wbg" height="20" border="0" cellspacing="0" name="adsp_list_post_info_b">
+                  <tr><td class="posttitle faceblue">
+                      <a href="http://www.tianya.cn/techforum/content/100/1/760697.shtml" target="_blank">[肿瘤科]有没有甲状腺肿瘤手术后转移的病例？</a></td>
+                          <td class="author"><a href="http://my.tianya.cn/19144312" target="_blank">whusk1982</a>
+                          </td>
+                          <td class="tviewre w_c">447</td>
+                          <td class="treplay w_c">1</td>
+                          <td class="ttime w_c">10-15 14:54</td>
+                      </tr>
+                    </table>
+                 <table class="listtable bg" height="20" border="0" cellspacing="0" name="adsp_list_post_info_b">
+                  <tr><td class="posttitle faceblue">
+                      <a href="http://www.tianya.cn/techforum/content/100/1/771422.shtml" target="_blank">[肿瘤科]有过甲状腺或淋巴肿瘤病史的病友请看过来！！急！！</a></td>
+                          <td class="author"><a href="http://my.tianya.cn/25198385" target="_blank">欧饭饭</a>
+                          </td>
+                          <td class="tviewre w_c">951</td>
+                          <td class="treplay w_c">5</td>
+                          <td class="ttime w_c">10-15 14:45</td>
+                      </tr>
+                    </table>
+                 <table class="listtable wbg" height="20" border="0" cellspacing="0" name="adsp_list_post_info_b">
+                  <tr><td class="posttitle faceblue">
+                      <a href="http://www.tianya.cn/techforum/content/100/1/723962.shtml" target="_blank">[肿瘤科]58岁的农村父亲肺癌晚期啊,我该怎么办啊?</a></td>
+                          <td class="author"><a href="http://my.tianya.cn/10066417" target="_blank">gosent</a>
+                          </td>
+                          <td class="tviewre w_c">83184</td>
+                          <td class="treplay w_c">1257</td>
+                          <td class="ttime w_c">10-15 14:45</td>
+                      </tr>
+                    </table>
+                 <table class="listtable bg" height="20" border="0" cellspacing="0" name="adsp_list_post_info_b">
+                  <tr><td class="posttitle faceblue">
+                      <a href="http://www.tianya.cn/techforum/content/100/1/674203.shtml" target="_blank">[肿瘤科]请求甲状腺肿瘤怎么治疗？</a></td>
+                          <td class="author"><a href="http://my.tianya.cn/10282401" target="_blank">richgiant</a>
+                          </td>
+                          <td class="tviewre w_c">1113</td>
+                          <td class="treplay w_c">5</td>
+                          <td class="ttime w_c">10-15 14:38</td>
+                      </tr>
+                    </table>
+                 <table class="listtable wbg" height="20" border="0" cellspacing="0" name="adsp_list_post_info_b">
+                  <tr><td class="posttitle faceblue">
+                      <a href="http://www.tianya.cn/techforum/content/100/1/711870.shtml" target="_blank">[肿瘤科]我的24岁女朋友得了甲状腺肿瘤，求助！</a></td>
+                          <td class="author"><a href="http://my.tianya.cn/2354747" target="_blank">忘记忘记王</a>
+                          </td>
+                          <td class="tviewre w_c">7553</td>
+                          <td class="treplay w_c">38</td>
+                          <td class="ttime w_c">10-15 14:16</td>
+                      </tr>
+                    </table>
+                 <table class="listtable bg" height="20" border="0" cellspacing="0" name="adsp_list_post_info_b">
+                  <tr><td class="posttitle faceblue">
+                      <a href="http://www.tianya.cn/techforum/content/100/1/655976.shtml" target="_blank">[肿瘤科]妈妈得了甲状腺肿瘤！急死了！拜求高手指点一下！</a></td>
+                          <td class="author"><a href="http://my.tianya.cn/7290039" target="_blank">小企鹅绒绒</a>
+                          </td>
+                          <td class="tviewre w_c">2591</td>
+                          <td class="treplay w_c">23</td>
+                          <td class="ttime w_c">10-15 14:06</td>
+                      </tr>
+                    </table>
+                 <table class="listtable wbg" height="20" border="0" cellspacing="0" name="adsp_list_post_info_b">
+                  <tr><td class="posttitle faceblue">
+                      <a href="http://www.tianya.cn/techforum/content/100/1/837151.shtml" target="_blank">[肿瘤科]直肠癌中晚期---爸爸，你一定要健康起来！！！</a></td>
+                          <td class="author"><a href="http://my.tianya.cn/24255407" target="_blank">夏日琰琰</a>
+                          </td>
+                          <td class="tviewre w_c">3415</td>
+                          <td class="treplay w_c">81</td>
+                          <td class="ttime w_c">10-15 13:38</td>
+                      </tr>
+                    </table>
+                 <table class="listtable bg" height="20" border="0" cellspacing="0" name="adsp_list_post_info_b">
+                  <tr><td class="posttitle faceblue">
+                      <a href="http://www.tianya.cn/techforum/content/100/1/868090.shtml" target="_blank">[肿瘤科]胰头癌的姐夫中西医治疗记录，2011年10月1日起</a></td>
+                          <td class="author"><a href="http://my.tianya.cn/58338311" target="_blank">不要迷信专家</a>
+                          </td>
+                          <td class="tviewre w_c">730</td>
+                          <td class="treplay w_c">12</td>
+                          <td class="ttime w_c">10-15 13:21</td>
+                      </tr>
+                    </table>
+                 <table class="listtable wbg" height="20" border="0" cellspacing="0" name="adsp_list_post_info_b">
+                  <tr><td class="posttitle faceblue">
+                      <a href="http://www.tianya.cn/techforum/content/100/1/814839.shtml" target="_blank">[肿瘤科]胰腺癌肝转移有经验的医生来帮忙</a></td>
+                          <td class="author"><a href="http://my.tianya.cn/55018163" target="_blank">创造神迹</a>
+                          </td>
+                          <td class="tviewre w_c">6518</td>
+                          <td class="treplay w_c">185</td>
+                          <td class="ttime w_c">10-15 13:12</td>
+                      </tr>
+                    </table>
+                 <table class="listtable bg" height="20" border="0" cellspacing="0" name="adsp_list_post_info_b">
+                  <tr><td class="posttitle faceblue">
+                      <a href="http://www.tianya.cn/techforum/content/100/1/859958.shtml" target="_blank">[肿瘤科]老公加油，1岁儿子还不会叫爸爸呢</a></td>
+                          <td class="author"><a href="http://my.tianya.cn/22839830" target="_blank">forwardlooking</a>
+                          </td>
+                          <td class="tviewre w_c">3564</td>
+                          <td class="treplay w_c">77</td>
+                          <td class="ttime w_c">10-15 12:12</td>
+                      </tr>
+                    </table>
+                 <table class="listtable wbg" height="20" border="0" cellspacing="0" name="adsp_list_post_info_b">
+                  <tr><td class="posttitle faceblue">
+                      <a href="http://www.tianya.cn/techforum/content/100/1/706160.shtml" target="_blank">[肿瘤科]妈妈肺腺癌晚期服用易瑞沙情况报告</a></td>
+                          <td class="author"><a href="http://my.tianya.cn/21664767" target="_blank">我来了12</a>
+                          </td>
+                          <td class="tviewre w_c">111132</td>
+                          <td class="treplay w_c">1072</td>
+                          <td class="ttime w_c">10-15 11:30</td>
+                      </tr>
+                    </table>
+                 <table class="listtable bg" height="20" border="0" cellspacing="0" name="adsp_list_post_info_b">
+                  <tr><td class="posttitle faceblue">
+                      <a href="http://www.tianya.cn/techforum/content/100/1/870347.shtml" target="_blank">[肿瘤科]：父亲得了肺癌，全身热辣辣，巨乏力，有朋友有这方面的经验吗？</a></td>
+                          <td class="author"><a href="http://my.tianya.cn/50030808" target="_blank">科斯特里奥</a>
+                          </td>
+                          <td class="tviewre w_c">602</td>
+                          <td class="treplay w_c">16</td>
+                          <td class="ttime w_c">10-15 10:48</td>
+                      </tr>
+                    </table>
+                 <table class="listtable wbg" height="20" border="0" cellspacing="0" name="adsp_list_post_info_b">
+                  <tr><td class="posttitle faceblue">
+                      <a href="http://www.tianya.cn/techforum/content/100/1/759388.shtml" target="_blank">[肿瘤科]今天，我的妈妈已经走了。乳腺癌复发，肝癌、骨癌转移，吐血。</a></td>
+                          <td class="author"><a href="http://my.tianya.cn/8055516" target="_blank">023zmg</a>
+                          </td>
+                          <td class="tviewre w_c">6101</td>
+                          <td class="treplay w_c">20</td>
+                          <td class="ttime w_c">10-15 10:19</td>
+                      </tr>
+                    </table>
+                 <table class="listtable bg" height="20" border="0" cellspacing="0" name="adsp_list_post_info_b">
+                  <tr><td class="posttitle faceblue">
+                      <a href="http://www.tianya.cn/techforum/content/100/1/587028.shtml" target="_blank">[肿瘤科]求助，再次手术，交界性卵巢肿瘤的治疗。</a></td>
+                          <td class="author"><a href="http://my.tianya.cn/1203223" target="_blank">e-succuba</a>
+                          </td>
+                          <td class="tviewre w_c">16253</td>
+                          <td class="treplay w_c">175</td>
+                          <td class="ttime w_c">10-15 10:10</td>
+                      </tr>
+                    </table>
+                 <table class="listtable wbg" height="20" border="0" cellspacing="0" name="adsp_list_post_info_b">
+                  <tr><td class="posttitle faceblue">
+                      <a href="http://www.tianya.cn/techforum/content/100/1/869776.shtml" target="_blank">[肿瘤科]爱妻患胃癌，病因何在？</a></td>
+                          <td class="author"><a href="http://my.tianya.cn/55168268" target="_blank">xcwerhua</a>
+                          </td>
+                          <td class="tviewre w_c">1590</td>
+                          <td class="treplay w_c">29</td>
+                          <td class="ttime w_c">10-15 9:55</td>
+                      </tr>
+                    </table>
+                 <table class="listtable bg" height="20" border="0" cellspacing="0" name="adsp_list_post_info_b">
+                  <tr><td class="posttitle faceblue">
+                      <a href="http://www.tianya.cn/techforum/content/100/1/881923.shtml" target="_blank">[肿瘤科]寂寞河床帮忙看看我父亲的乳腺癌的病理结果，大家没有看错是我的父亲。</a></td>
+                          <td class="author"><a href="http://my.tianya.cn/58940098" target="_blank">免疫组化检</a>
+                          </td>
+                          <td class="tviewre w_c">181</td>
+                          <td class="treplay w_c">3</td>
+                          <td class="ttime w_c">10-15 9:51</td>
+                      </tr>
+                    </table>
+                 <table class="listtable wbg" height="20" border="0" cellspacing="0" name="adsp_list_post_info_b">
+                  <tr><td class="posttitle faceblue">
+                      <a href="http://www.tianya.cn/techforum/content/100/1/845144.shtml" target="_blank">[肿瘤科]你走了我怎么办？！肺腺癌四期只能等死了吗？</a></td>
+                          <td class="author"><a href="http://my.tianya.cn/55513715" target="_blank">暖暖up</a>
+                          </td>
+                          <td class="tviewre w_c">4534</td>
+                          <td class="treplay w_c">100</td>
+                          <td class="ttime w_c">10-15 9:17</td>
+                      </tr>
+                    </table>
+                 <table class="listtable bg" height="20" border="0" cellspacing="0" name="adsp_list_post_info_b">
+                  <tr><td class="posttitle faceblue">
+                      <a href="http://www.tianya.cn/techforum/content/100/1/868089.shtml" target="_blank">[肿瘤科]子宫内膜癌，请大家帮忙看看病理</a></td>
+                          <td class="author"><a href="http://my.tianya.cn/57155982" target="_blank">小草0425</a>
+                          </td>
+                          <td class="tviewre w_c">590</td>
+                          <td class="treplay w_c">13</td>
+                          <td class="ttime w_c">10-15 9:09</td>
+                      </tr>
+                    </table>
+                 <table class="listtable wbg" height="20" border="0" cellspacing="0" name="adsp_list_post_info_b">
+                  <tr><td class="posttitle faceblue">
+                      <a href="http://www.tianya.cn/techforum/content/100/1/782080.shtml" target="_blank">[肿瘤科]人近中年的悲哀--家有多癌</a></td>
+                          <td class="author"><a href="http://my.tianya.cn/50120803" target="_blank">人生学孝</a>
+                          </td>
+                          <td class="tviewre w_c">3788</td>
+                          <td class="treplay w_c">29</td>
+                          <td class="ttime w_c">10-15 2:03</td>
+                      </tr>
+                    </table>
+                 <table class="listtable bg" height="20" border="0" cellspacing="0" name="adsp_list_post_info_b">
+                  <tr><td class="posttitle faceblue">
+                      <a href="http://www.tianya.cn/techforum/content/100/1/792761.shtml" target="_blank">[肿瘤科]甲状腺未分化癌如何治疗---妈妈你要坚强挺住，求天涯好心人指点</a></td>
+                          <td class="author"><a href="http://my.tianya.cn/2714537" target="_blank">青菜淡淡香</a>
+                          </td>
+                          <td class="tviewre w_c">3071</td>
+                          <td class="treplay w_c">94</td>
+                          <td class="ttime w_c">10-15 1:58</td>
+                      </tr>
+                    </table>
+                 <table class="listtable wbg" height="20" border="0" cellspacing="0" name="adsp_list_post_info_b">
+                  <tr><td class="posttitle faceblue">
+                      <a href="http://www.tianya.cn/techforum/content/100/1/883062.shtml" target="_blank">[肿瘤科]小麦苗汁</a></td>
+                          <td class="author"><a href="http://my.tianya.cn/58647923" target="_blank">zhumin710315</a>
+                          </td>
+                          <td class="tviewre w_c">103</td>
+                          <td class="treplay w_c">2</td>
+                          <td class="ttime w_c">10-15 1:47</td>
+                      </tr>
+                    </table>
+                 <table class="listtable bg" height="20" border="0" cellspacing="0" name="adsp_list_post_info_b">
+                  <tr><td class="posttitle faceblue">
+                      <a href="http://www.tianya.cn/techforum/content/100/1/882708.shtml" target="_blank">[肿瘤科]希望得淋巴瘤的老爸早日康复</a></td>
+                          <td class="author"><a href="http://my.tianya.cn/58954542" target="_blank">westwood2624</a>
+                          </td>
+                          <td class="tviewre w_c">106</td>
+                          <td class="treplay w_c">2</td>
+                          <td class="ttime w_c">10-15 1:12</td>
+                      </tr>
+                    </table>
+                 <table class="listtable wbg" height="20" border="0" cellspacing="0" name="adsp_list_post_info_b">
+                  <tr><td class="posttitle faceblue">
+                      <a href="http://www.tianya.cn/techforum/content/100/1/882166.shtml" target="_blank">[肿瘤科]宫颈癌永远的夺走了我亲爱的妈妈</a></td>
+                          <td class="author"><a href="http://my.tianya.cn/54022206" target="_blank">相知相惜me</a>
+                          </td>
+                          <td class="tviewre w_c">246</td>
+                          <td class="treplay w_c">6</td>
+                          <td class="ttime w_c">10-15 1:07</td>
+                      </tr>
+                    </table>
+                 <table class="listtable bg" height="20" border="0" cellspacing="0" name="adsp_list_post_info_b">
+                  <tr><td class="posttitle faceblue">
+                      <a href="http://www.tianya.cn/techforum/content/100/1/843610.shtml" target="_blank">[肿瘤科]卵巢癌复发，盆腔广泛扩散，为妈妈祈祷，好人有好报</a></td>
+                          <td class="author"><a href="http://my.tianya.cn/56901681" target="_blank">悲伤的女儿1</a>
+                          </td>
+                          <td class="tviewre w_c">6455</td>
+                          <td class="treplay w_c">216</td>
+                          <td class="ttime w_c">10-15 0:49</td>
+                      </tr>
+                    </table>
+                 <table class="listtable wbg" height="20" border="0" cellspacing="0" name="adsp_list_post_info_b">
+                  <tr><td class="posttitle faceblue">
+                      <a href="http://www.tianya.cn/techforum/content/100/1/854493.shtml" target="_blank">[肿瘤科]妈妈得了胰腺癌，我带父母去旅行</a></td>
+                          <td class="author"><a href="http://my.tianya.cn/57634148" target="_blank">带上父母去旅行</a>
+                          </td>
+                          <td class="tviewre w_c">5136</td>
+                          <td class="treplay w_c">156</td>
+                          <td class="ttime w_c">10-15 0:02</td>
+                      </tr>
+                    </table>
+                 <table class="listtable bg" height="20" border="0" cellspacing="0" name="adsp_list_post_info_b">
+                  <tr><td class="posttitle faceblue">
+                      <a href="http://www.tianya.cn/techforum/content/100/1/870239.shtml" target="_blank">[肿瘤科]岳母卵巢癌晚期广泛转移，抗癌路上点滴记录</a></td>
+                          <td class="author"><a href="http://my.tianya.cn/58495133" target="_blank">沙漠绿洲369</a>
+                          </td>
+                          <td class="tviewre w_c">616</td>
+                          <td class="treplay w_c">11</td>
+                          <td class="ttime w_c">10-14 23:48</td>
+                      </tr>
+                    </table>
+                 <table class="listtable wbg" height="20" border="0" cellspacing="0" name="adsp_list_post_info_b">
+                  <tr><td class="posttitle faceblue">
+                      <a href="http://www.tianya.cn/techforum/content/100/1/852039.shtml" target="_blank">[肿瘤科]胃癌晚期，记录爸爸的点点滴滴</a></td>
+                          <td class="author"><a href="http://my.tianya.cn/57524518" target="_blank">sherrygou78</a>
+                          </td>
+                          <td class="tviewre w_c">1748</td>
+                          <td class="treplay w_c">60</td>
+                          <td class="ttime w_c">10-14 23:45</td>
+                      </tr>
+                    </table>
+                 <table class="listtable bg" height="20" border="0" cellspacing="0" name="adsp_list_post_info_b">
+                  <tr><td class="posttitle faceblue">
+                      <a href="http://www.tianya.cn/techforum/content/100/1/860116.shtml" target="_blank">[肿瘤科]战胜宫颈癌，我们一起努力！！！</a></td>
+                          <td class="author"><a href="http://my.tianya.cn/790860" target="_blank">小迷糊寒冰</a>
+                          </td>
+                          <td class="tviewre w_c">2586</td>
+                          <td class="treplay w_c">78</td>
+                          <td class="ttime w_c">10-14 23:27</td>
+                      </tr>
+                    </table>
+                 <table class="listtable wbg" height="20" border="0" cellspacing="0" name="adsp_list_post_info_b">
+                  <tr><td class="posttitle faceblue">
+                      <a href="http://www.tianya.cn/techforum/content/100/1/700969.shtml" target="_blank">[肿瘤科]我该怎么办？请专家看看乳腺癌的病例~</a></td>
+                          <td class="author"><a href="http://my.tianya.cn/20260545" target="_blank">农场小木屋</a>
+                          </td>
+                          <td class="tviewre w_c">23525</td>
+                          <td class="treplay w_c">318</td>
+                          <td class="ttime w_c">10-14 23:12</td>
+                      </tr>
+                    </table>
+                 <table class="listtable bg" height="20" border="0" cellspacing="0" name="adsp_list_post_info_b">
+                  <tr><td class="posttitle faceblue">
+                      <a href="http://www.tianya.cn/techforum/content/100/1/865560.shtml" target="_blank">[肿瘤科]母亲肠癌肝转移 决不放弃，期待奇迹！</a></td>
+                          <td class="author"><a href="http://my.tianya.cn/58215651" target="_blank">我愿为卒2011</a>
+                          </td>
+                          <td class="tviewre w_c">1086</td>
+                          <td class="treplay w_c">37</td>
+                          <td class="ttime w_c">10-14 22:24</td>
+                      </tr>
+                    </table>
+                 <table class="listtable wbg" height="20" border="0" cellspacing="0" name="adsp_list_post_info_b">
+                  <tr><td class="posttitle faceblue">
+                      <a href="http://www.tianya.cn/techforum/content/100/1/883051.shtml" target="_blank">[肿瘤科]请好心人帮忙看看我母亲的乳腺癌病理报告</a></td>
+                          <td class="author"><a href="http://my.tianya.cn/9694852" target="_blank">孙小丫</a>
+                          </td>
+                          <td class="tviewre w_c">78</td>
+                          <td class="treplay w_c">0</td>
+                          <td class="ttime w_c">10-14 22:10</td>
+                      </tr>
+                    </table>
+                 <table class="listtable bg" height="20" border="0" cellspacing="0" name="adsp_list_post_info_b">
+                  <tr><td class="posttitle faceblue">
+                      <a href="http://www.tianya.cn/techforum/content/100/1/760982.shtml" target="_blank">[肿瘤科]妈妈患上卵巢癌以后的日子</a></td>
+                          <td class="author"><a href="http://my.tianya.cn/42952336" target="_blank">lhx坚持</a>
+                          </td>
+                          <td class="tviewre w_c">9615</td>
+                          <td class="treplay w_c">153</td>
+                          <td class="ttime w_c">10-14 22:05</td>
+                      </tr>
+                    </table>
+                 <table class="listtable wbg" height="20" border="0" cellspacing="0" name="adsp_list_post_info_b">
+                  <tr><td class="posttitle faceblue">
+                      <a href="http://www.tianya.cn/techforum/content/100/1/767601.shtml" target="_blank">[肿瘤科]胰腺疾病进行时</a></td>
+                          <td class="author"><a href="http://my.tianya.cn/45260999" target="_blank">这个冬天真有点冷</a>
+                          </td>
+                          <td class="tviewre w_c">29405</td>
+                          <td class="treplay w_c">702</td>
+                          <td class="ttime w_c">10-14 21:47</td>
+                      </tr>
+                    </table>
+                 <table class="listtable bg" height="20" border="0" cellspacing="0" name="adsp_list_post_info_b">
+                  <tr><td class="posttitle faceblue">
+                      <a href="http://www.tianya.cn/techforum/content/100/1/787704.shtml" target="_blank">[肿瘤科]战胜胃癌，父亲的求医治疗历程</a></td>
+                          <td class="author"><a href="http://my.tianya.cn/51491606" target="_blank">生命如流星</a>
+                          </td>
+                          <td class="tviewre w_c">15833</td>
+                          <td class="treplay w_c">312</td>
+                          <td class="ttime w_c">10-14 21:34</td>
+                      </tr>
+                    </table>
+                 <table class="listtable wbg" height="20" border="0" cellspacing="0" name="adsp_list_post_info_b">
+                  <tr><td class="posttitle faceblue">
+                      <a href="http://www.tianya.cn/techforum/content/100/1/876329.shtml" target="_blank">[肿瘤科]76岁的爸爸，面对贲门癌，你一定要坚强！</a></td>
+                          <td class="author"><a href="http://my.tianya.cn/58466187" target="_blank">紫色的云ms</a>
+                          </td>
+                          <td class="tviewre w_c">300</td>
+                          <td class="treplay w_c">11</td>
+                          <td class="ttime w_c">10-14 21:24</td>
+                      </tr>
+                    </table>
+                 <table class="listtable bg" height="20" border="0" cellspacing="0" name="adsp_list_post_info_b">
+                  <tr><td class="posttitle faceblue">
+                      <a href="http://www.tianya.cn/techforum/content/100/1/792536.shtml" target="_blank">[肿瘤科]红苹果胃印戒细胞癌T4n3m1四期</a></td>
+                          <td class="author"><a href="http://my.tianya.cn/52551298" target="_blank">zspaple</a>
+                          </td>
+                          <td class="tviewre w_c">2343</td>
+                          <td class="treplay w_c">39</td>
+                          <td class="ttime w_c">10-14 21:05</td>
+                      </tr>
+                    </table>
+                 <table class="listtable wbg" height="20" border="0" cellspacing="0" name="adsp_list_post_info_b">
+                  <tr><td class="posttitle faceblue">
+                      <a href="http://www.tianya.cn/techforum/content/100/1/883040.shtml" target="_blank">[肿瘤科]胃部疾病求教</a></td>
+                          <td class="author"><a href="http://my.tianya.cn/26542456" target="_blank">michaelreal</a>
+                          </td>
+                          <td class="tviewre w_c">70</td>
+                          <td class="treplay w_c">0</td>
+                          <td class="ttime w_c">10-14 21:02</td>
+                      </tr>
+                    </table>
+                 <table class="listtable bg" height="20" border="0" cellspacing="0" name="adsp_list_post_info_b">
+                  <tr><td class="posttitle faceblue">
+                      <a href="http://www.tianya.cn/techforum/content/100/1/737268.shtml" target="_blank">[肿瘤科]肝胆管细胞癌</a></td>
+                          <td class="author"><a href="http://my.tianya.cn/26824760" target="_blank">siyu6888</a>
+                          </td>
+                          <td class="tviewre w_c">19854</td>
+                          <td class="treplay w_c">399</td>
+                          <td class="ttime w_c">10-14 21:02</td>
+                      </tr>
+                    </table>
+                 
+            </div>
+            <div class="ftarea">            
+                <form name="frmSearch" id="frmSearch" method="get" target="_blank" action="http://www.tianya.cn/new/techforum/searchsubmit.asp" accept-charset="gbk" onsubmit="document.charset='gbk';">
+				<input type="hidden" name="idItem" value="100" />
+				<input name="select_search" type="hidden" value="1" > 
+                    <div class="fsearch" id="search_id">                   
+                        <div id="search_body">
+                            <input name="strSearch" id="q" type="text" value="请输入关键字" onblur="InputText();" onfocus="ClearQ();" style="color:#ccc" />
+                            <div id="result_id"></div>
+                        </div>
+                        <div id="botton_id">&nbsp;<input type="submit" class="fbtn70" value="搜索" onmouseover="this.className='fbtns70'" onmouseout="this.className='fbtn70'" />
+                        </div>   
+                        <input type="hidden" name="s" value="1" />
+                        <input type="hidden" name="l" value="gbk" />
+                        <input type="hidden" name="pid" value="100" />
+                        <input type="hidden" name="utm_source" value="bbs" />
+                        <input type="hidden" name="utm_medium" value="search" />
+                        <input type="hidden" name="utm_campaign" value="天涯医院" />
+                    </div>
+                </form>
+                <script language="JavaScript">            
+                function ClearQ()
+                {
+                    var InputObjt = document.getElementById('q');
+                    if(InputObjt.value=='请输入关键字')
+                    {   
+                        InputObjt.value='';
+                        InputObjt.style.color='#333';
+                    }                
+                }
+                function InputText()
+                {
+                    var InputObjt = document.getElementById('q');
+                    if(InputObjt.value=='')
+                    {
+                        InputObjt.value='请输入关键字';
+                        InputObjt.style.color='#ccc';
+                    }
+                }            
+                var $ = jQuery;
+                $(function(){
+                   var close = true ;
+                   $("#q").keyup(function(){
+                        var nkey = $.trim($(this).val()) ;
+                        if (nkey.length<6) {
+                            show_nkey = nkey;
+                        }
+                        else{
+                            show_nkey = nkey.substring(0,6)+'...';
+                        }
+                        if("" == nkey || null == nkey){
+                         $("#result_id").hide() ;
+                        }
+                        else {
+                         var html = '<p>请选择搜索范围</p><ul><li><a href="http://www.tianya.cn/new/techforum/searchsubmit.asp?select_search=1&strSearch='+nkey+'&iditem=100" target="_blank">本版含<span class="search-id-red">'+show_nkey+'</span>的帖子</a></li><li><a href="http://www.tianya.cn/new/techforum/searchsubmit.asp?select_search=0&strSearch='+nkey+'&iditem=100" target="_blank">作者<span class="search-id-red">'+show_nkey+'</span>在本版的帖子</a></li></ul>';
+                         $("#result_id").show() ;
+                         $("#result_id").html(html);
+                         $("#result_id ul li").click(function(){
+                         
+                         $("#result_id").hide() ;}).hover(
+                          function () {
+                           close = false ;
+                          },
+                          function () {
+                           close = true ;
+                          }
+                         );
+                        }
+                       }).blur(function(){
+                        if(close) {
+                         $("#result_id").hide() ; 
+                        } 
+                       });
+                });
+                </script>            
+                <div class="ftarea-r">
+                    <ul>
+                       <li class="fbtn70" onmouseover="this.className='fbtns70'" onmouseout="this.className='fbtn70'"><a href="http://www.tianya.cn/new/techforum/ArticlesList.asp?pageno=1&iditem=100&part=0&subitem=肿瘤科">刷新</a></li>
+                        <li class="fbtn120" onmouseover="this.className='fbtns120'" onmouseout="this.className='fbtn120'" >
+                            <a href="http://www.tianya.cn/new/techforum/ArticlesList.asp?pageno=2&iditem=100&part=0&nextarticle=2011%2D10%2D14+21%3A02%3A25&subitem=肿瘤科&strpart=最新更新">下一页</a>
+                            
+                            </li>
+                        
+                    </ul>
+                </div>
+            </div>
+            <span class="clear"></span>
+            <script type="text/javascript" src="http://static.tianyaui.com/js/2009/js/tianya_footer1.js">
+            </script>
+        </div>
+        <div id="newmainmidright">        
+            <div id="adsp_list_right_banner_1"></div>
+            <div id="adsp_list_right_banner_3"></div>
+            <div id="adsp_list_right_banner_2"></div>
+            <div id="adsp_list_right_banner_4"></div>
+            <div id="adsp_list_right_banner_6"></div>
+            <div id="adsp_list_right_banner_5"></div>            	
+        </div>  
+    </div>
+  </div>
+</div>
+<SCRIPT language="JavaScript" type="text/javascript"  charset="UTF-8" src="http://806.tianya.cn/display?f=100&g=pageindex&alladv=allbbs"></SCRIPT>
+<script type="text/javascript" src="http://static.tianyaui.com/js/global/stat_20080313.js"></script>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+//最新访问的8个版块
+//popularItem.set("天涯医院","100","t");
+pitemVO.n = "天涯医院";
+pitemVO.s = "100";
+pitemVO.c = "t"; 
+//-->
+</SCRIPT>
+<SCRIPT language="JavaScript" type="text/javascript"  charset="UTF-8" src="http://static.tianyaui.com/js/2011/bbsclk.js"></SCRIPT>
+<script charset="UTF-8" src="http://global.tianyaui.com/global/wizard/js/wizard.js" type="text/javascript"></script>
+
+</body>
+</html>
