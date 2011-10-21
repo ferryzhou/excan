@@ -37,6 +37,7 @@ def extract_tianya_forum_items(content)
   tbs = doc.search('table.listtable')
   tbs.shift #remove first
   puts "#{tbs.size} results:"
+  year = Time.now.year
   tbs.collect do |e|
     begin
     tr = e.at('tr');
@@ -48,7 +49,7 @@ def extract_tianya_forum_items(content)
       'link'  => title_e['href'],
       'author' => author_e.inner_html,
 	  'author_link' => author_e['href'],
-      'date'  => '20' + date_e.inner_html,
+      'date'  => "#{year}-" + date_e.inner_html,
       'description' => '',
 	  'source' => 'tianya_forum'
     })

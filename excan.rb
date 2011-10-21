@@ -14,10 +14,11 @@ if ARGV.size == 0
   exit(1)
 end
 
-DB_PATH = 'development.sqlite3'
+#DB_PATH = 'development.sqlite3'
+DB_PATH = '../excan_rails/db/development.sqlite3'
 START_URL = 'http://www.tianya.cn/new/techforum/ArticlesList.asp?pageno=1&iditem=100&part=0&subitem=%D6%D7%C1%F6%BF%C6'
 HTM_ROOT = '../cancer_htm'
-END_COUNT = 2
+END_COUNT = 20
 HTM_FOLDER_NAME = 'tianya_zhongliu'
 METHOD = 'tianya_forum'
 
@@ -37,8 +38,6 @@ def exall
   archiever = MultiPageArchiever.new(HTM_ROOT)
   archiever.end_count = END_COUNT
   archiever.run(START_URL, HTM_FOLDER_NAME)
-  
-  import
 end
 
 def import
@@ -49,8 +48,6 @@ end
 def update
   p 'archieving html page ....................'
   PageArchiever.new(HTM_ROOT).read_and_save_url(START_URL, HTM_FOLDER_NAME)
-  
-  import
 end
 
 eval(cmd_str)
