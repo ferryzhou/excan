@@ -18,7 +18,7 @@ end
 DB_PATH = '../excan_rails/db/development.sqlite3'
 START_URL = 'http://www.tianya.cn/new/techforum/ArticlesList.asp?pageno=1&iditem=100&part=0&subitem=%D6%D7%C1%F6%BF%C6'
 HTM_ROOT = '../cancer_htm'
-END_COUNT = 20
+END_COUNT = 50
 HTM_FOLDER_NAME = 'tianya_zhongliu'
 METHOD = 'tianya_forum'
 
@@ -29,8 +29,14 @@ cmd_str = ARGV[0]
 DB = Sequel.sqlite(DB_PATH)
 TABLE = DB[:posts]
 
+def clean_archieves
+  p 'clean archieves ............'
+  FileUtils.rm_rf HTM_FOLDER
+end
+
 def clean
- TABLE.delete
+  p 'clean table ....................'
+  TABLE.delete
 end
 
 def exall
@@ -45,9 +51,21 @@ def import
   sequel_import_dir_incrementally(TABLE, HTM_FOLDER, METHOD)
 end
 
-def update
+def exone
   p 'archieving html page ....................'
   PageArchiever.new(HTM_ROOT).read_and_save_url(START_URL, HTM_FOLDER_NAME)
+end
+
+def update
+  exone; import;
+end
+
+def reboot
+  #p "Are you sure to delete all archieves, database and rebuild? (Y/n)"
+  #b = gets.chomp
+  #if b != 'Y'; p 'cancelled ........'; return; end
+  p 'reboot ...........'
+  clean; clean_archieves; exall; import;
 end
 
 eval(cmd_str)
