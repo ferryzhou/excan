@@ -9,8 +9,9 @@ def sequel_import_file(table, filepath, method)
   p "import #{filepath} ......"
   content = open(filepath).read
   items = extract_items(content, method)
+  ignored_count = 0; imported_count = 0;
   items.each do |item|
-	if !table.filter(:link => item.link).empty?; next; end
+	if !table.filter(:link => item.link).empty?; ignored_count = ignored_count+1; next; end
     table.insert(
       :title => item.title, 
       :link => item.link,
@@ -19,7 +20,9 @@ def sequel_import_file(table, filepath, method)
 	  :date => item.date,
 	  :source => item.source
 	)
+	imported_count = imported_count + 1;
   end
+  p "imported #{imported_count} items; ignored #{ignored_count} items"
 end
 
 def sequel_import_files(table, path_regex, method)
