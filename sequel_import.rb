@@ -10,6 +10,7 @@ def sequel_import_file(table, filepath, method)
   content = open(filepath).read
   items = extract_items(content, method)
   items.each do |item|
+	if !table.filter(:link => item.link).empty?; next; end
     table.insert(
       :title => item.title, 
       :link => item.link,
