@@ -60,6 +60,33 @@ def extract_tianya_forum_items(content)
   end
 end
 
+def extract_baidu_zhidao_items(content)
+  content = gb2312_to_utf8(content)
+  doc = Hpricot(content)
+  tbs = doc.search('table.table-list//tr')
+  puts "#{tbs.size} results:"
+  year = Time.now.year
+  tbs.collect do |e|
+    begin
+    tr = e
+	title_e = tr.at('td.align-l').at('a') 
+	date_e = tr.search('td').last
+    OpenStruct.new( {
+      'title' => title_e['title'],
+      'link'  => 'http://zhidao.baidu.com' + title_e['href'],
+      'author' => '',
+	  'author_link' => '',
+      'date'  => date_e.inner_html.strip!,
+      'description' => '',
+	  'source' => 'baidu_zhidao'
+    })
+	rescue
+	  p '[Error]'
+      puts $!
+	end
+  end
+end
+
 def extract_items(content, method)
   command = "extract_#{method}_items(content)"
   eval(command)
