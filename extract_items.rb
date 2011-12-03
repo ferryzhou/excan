@@ -63,7 +63,7 @@ end
 def extract_baidu_zhidao_items(content)
   content = gb2312_to_utf8(content)
   doc = Hpricot(content)
-  tbs = doc.search('table.table-list//tr')
+  tbs = doc.search('table.table-list/tbody/tr')
   puts "#{tbs.size} results:"
   year = Time.now.year
   tbs.collect do |e|
@@ -76,7 +76,7 @@ def extract_baidu_zhidao_items(content)
       'link'  => 'http://zhidao.baidu.com' + title_e['href'],
       'author' => '',
 	  'author_link' => '',
-      'date'  => date_e.inner_html.strip!,
+      'date'  => date_e.inner_html.strip! + ' 00:00',
       'description' => '',
 	  'source' => 'baidu_zhidao'
     })
